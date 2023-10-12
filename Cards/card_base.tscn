@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://bv6uv6y4j7v3v"]
+
+[ext_resource type="Script" path="res://Cards/card_base.gd" id="1_2ld2n"]
+
+[node name="card_base" type="MarginContainer"]
+custom_minimum_size = Vector2(250, 389)
+offset_right = 40.0
+offset_bottom = 40.0
+pivot_offset = Vector2(125, 194.5)
+script = ExtResource("1_2ld2n")
+
+[node name="card" type="Sprite2D" parent="."]
+centered = false
+
+[node name="bars" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="top_gap" type="MarginContainer" parent="bars"]
+custom_minimum_size = Vector2(0, 75.115)
+layout_mode = 2
+
+[node name="top_bar" type="HBoxContainer" parent="bars"]
+layout_mode = 2
+
+[node name="left_margin" type="MarginContainer" parent="bars/top_bar"]
+custom_minimum_size = Vector2(176.5, 0)
+layout_mode = 2
+
+[node name="health" type="MarginContainer" parent="bars/top_bar"]
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="bars/top_bar/health"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="bars/top_bar/health"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="bars/top_bar/health/CenterContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
